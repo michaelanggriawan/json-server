@@ -11,8 +11,8 @@ server.use(jsonServer.bodyParser)
 server.use(middlewares)
 server.use(router)
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
-server.listen(PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log(`JSON Server is running on http://localhost:${PORT}`)
 })
